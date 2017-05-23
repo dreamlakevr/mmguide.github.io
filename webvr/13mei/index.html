@@ -1,6 +1,8 @@
 <head>
-    <title>MM Guide Smoelenboek </title>
-
+    <title>MM Guide VR Gallery  </title>
+    <base href='/'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
     <script src="../js/aframe.min.js"></script>
     <script src="../js/components/billboard.js"></script>
     <script src="../js/components/gradient.js"></script>
@@ -11,6 +13,7 @@
     <script src="../js/components/proxy.js"></script>
     <script src="../js/components/webvr-ui.js"></script>
     <script src="../js/components/lazyload.js"></script>
+     <script src="../js/components/xboxgamepad.js"></script>
 
     <!-- FAVICONS -->
     <link rel="shortcut icon" sizes="16x16" href="../images/favicons/favicon.png">
@@ -29,7 +32,7 @@
     <a-scene stats>
         <!--    <a-scene fog="type: exponential; color: #336fa1; density: 1" animation="property: fog.density; dur: 3000; easing: easeInOutSine; loop: false; to: 0.1">-->
 <!--        <a-gradient-sky material="shader: gradient; topColor: 245 245 245; bottomColor: 51 111 161;"></a-gradient-sky>-->
-         <a-sky src="/webvr/13mei/images/skybox.jpg"></a-sky>
+         <a-sky src="/images/skybox.jpg"></a-sky>
         <a-assets>
             <a-mixin id="mmorange" color="#f26d40 , 242 109  64"></a-mixin>
             <a-mixin id="mmblue" color="#336fa1 ,  51 111 161"></a-mixin>
@@ -105,15 +108,15 @@
 
         </a-assets>
         
-        <a-entity position="0 0 2.85" rotation="0 0 0" color="" scale=".01 .01 .01" roughness="1" metalness="1"  material="src: url(/webvr/13mei/3d/museumVRayCompleteMap.jpg)" obj-model="obj: #museum-obj;"></a-entity>
+        <a-entity position="0 0 2.85" rotation="0 0 0" color="" scale=".01 .01 .01" roughness="1" metalness="1"  material="src: url(/3d/museumVRayCompleteMap.jpg)" obj-model="obj: #museum-obj;"></a-entity>
                 
             <a-entity light="type: ambient; color: #fff;intensity: 1.2"></a-entity>
            
          <a-entity layout="type: box; column: 6; margin:0.1;" position="-5 .15 -4" rotation="90 0 0">
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-1.jpg" data-position="1 .5 0" data-rotation="-180 0 34" data-caption="You can do anything, but not everything."></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-2.jpg" data-position="2 .5 0" data-rotation="-180 0 465" data-caption="Much wow, such fun!"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-3.jpg" data-position="3 .5 0" data-rotation="-180 0 324" data-caption="Roger, Roger"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-4.jpg" data-position="4 .5 0" data-rotation="-180 0 2435" data-caption="Thug Life"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: /images/polaroids/polaroid-img-1.jpg" data-position="1 .5 0" data-rotation="-180 0 34" data-caption="You can do anything, but not everything."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: /images/polaroids/polaroid-img-2.jpg" data-position="2 .5 0" data-rotation="-180 0 465" data-caption="Much wow, such fun!"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: /images/polaroids/polaroid-img-3.jpg" data-position="3 .5 0" data-rotation="-180 0 324" data-caption="We artists are a different breed of people. We're a happy bunch"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-4.jpg" data-position="4 .5 0" data-rotation="-180 0 2435" data-caption="If I paint something, I don't want to have to explain what it is"></a-entity>
                 <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-5.jpg" data-position="5 .5 0" data-rotation="-180 0 2345" data-caption="Seas the day!"></a-entity>
                 <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-6.jpg" data-position="6 .5 0" data-rotation="-180 0 213" data-caption="Pier Pressure"></a-entity>
                 <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-7.jpg" data-position="7 .5 0" data-rotation="-180 0 123" data-caption="One time at the beach this guy was swimming in the ocean yelling Help! Shark! Help!. I just laughed, I knew that shark wasn't going to help them."></a-entity>
@@ -148,24 +151,26 @@
                 <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-36.jpg" data-position="6 .5 0" data-rotation="-180 0 3450" data-caption="Van Gogh, van Goghing, Van Gone."></a-entity>
                 <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-37.jpg" data-position="7 .5 0" data-rotation="-180 0 345" data-caption="Happy accident"></a-entity>
                 <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-38.jpg" data-position="8 .5 0" data-rotation="-180 0 25345" data-caption="Like a Ross"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-39.jpg" data-position="9 .5 0" data-rotation="-180 0 22345" data-caption="Iron Sky"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-40.jpg" data-position="10 .5 0" data-rotation="-180 0 2345" data-caption="Somebody to love"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-41.jpg" data-position="1 .5 0" data-rotation="-180 0 2323145" data-caption="With or without you"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-42.jpg" data-position="2 .5 0" data-rotation="-180 0 234" data-caption="Highway to hell "></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-43.jpg" data-position="3 .5 0" data-rotation="-180 0 432" data-caption="Another brick in the wall"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-44.jpg" data-position="4 .5 0" data-rotation="-180 0 123" data-caption="Let it be"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-45.jpg" data-position="5 .5 0" data-rotation="-180 0 43" data-caption="The house of the rising sun"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-46.jpg" data-position="6 .5 0" data-rotation="-180 0 1234" data-caption="Killing in the name"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-47.jpg" data-position="7 .5 0" data-rotation="-180 0 43" data-caption="Chasing cars"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-48.jpg" data-position="8 .5 0" data-rotation="-180 0 2" data-caption="Losing my religion"></a-entity>     <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-49.jpg" data-position="9 .5 0" data-rotation="-180 0 123" data-caption="Let it be"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-50.jpg" data-position="10 .5 0" data-rotation="-180 0 43" data-caption="The house of the rising sun"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-51.jpg" data-position="1 .5 0" data-rotation="-180 0 1234" data-caption="Killing in the name"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-52.jpg" data-position="2 .5 0" data-rotation="-180 0 43" data-caption="Chasing cars"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-53.jpg" data-position="3 .5 0" data-rotation="-180 0 2" data-caption="Losing my religion"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-54.jpg" data-position="4 .5 0" data-rotation="-180 0 43" data-caption="The house of the rising sun"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-55.jpg" data-position="5 .5 0" data-rotation="-180 0 1234" data-caption="Killing in the name"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-56.jpg" data-position="6 .5 0" data-rotation="-180 0 43" data-caption="Chasing cars"></a-entity>
-                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-57.jpg" data-position="7 .5 0" data-rotation="-180 0 2" data-caption="Losing my religion"></a-entity>
+             
+             
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-39.jpg" data-position="9 .5 0" data-rotation="-180 0 22345" data-caption="Bob Ross doesn't have an afro because afros are cool, he just got tired of running out of brushes."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-40.jpg" data-position="10 .5 0" data-rotation="-180 0 2345" data-caption="This is happy place; little squirrels live here and play."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-41.jpg" data-position="1 .5 0" data-rotation="-180 0 2323145" data-caption="We don't really know where this goes -- and i'm not sure we really care..."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-42.jpg" data-position="2 .5 0" data-rotation="-180 0 234" data-caption="Just go out and talk to a tree. Make friends with it. "></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-43.jpg" data-position="3 .5 0" data-rotation="-180 0 432" data-caption="That's a crooked tree. We'll send him to Washington"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-44.jpg" data-position="4 .5 0" data-rotation="-180 0 123" data-caption="The only thing worse than yellow snow is green snow."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-45.jpg" data-position="5 .5 0" data-rotation="-180 0 43" data-caption="I like to beat the brush."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-46.jpg" data-position="6 .5 0" data-rotation="-180 0 1234" data-caption="In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-47.jpg" data-position="7 .5 0" data-rotation="-180 0 43" data-caption="You need the dark in order to show the light."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-48.jpg" data-position="8 .5 0" data-rotation="-180 0 2" data-caption="Look around. Look at what we have. Beauty is everywhere—you only have to look to see it."></a-entity>     <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-49.jpg" data-position="9 .5 0" data-rotation="-180 0 123" data-caption="Let it be"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-50.jpg" data-position="10 .5 0" data-rotation="-180 0 43" data-caption="Trees cover up a multitude of sins."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-51.jpg" data-position="1 .5 0" data-rotation="-180 0 1234" data-caption="They say everything looks better with odd numbers of things. But sometimes I put even numbers—just to upset the critics."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-52.jpg" data-position="2 .5 0" data-rotation="-180 0 43" data-caption="How do you make a round circle with a square knife? That’s your challenge for the day."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-53.jpg" data-position="3 .5 0" data-rotation="-180 0 2" data-caption="I remember when my Dad told me as a kid, ‘If you want to catch a rabbit, stand behind a tree and make a noise like a carrot. Then when the rabbit comes by you grab him.’ Works pretty good until you try to figure out what kind of noise a carrot makes…"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-54.jpg" data-position="4 .5 0" data-rotation="-180 0 43" data-caption="We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much to get you addicted."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-55.jpg" data-position="5 .5 0" data-rotation="-180 0 1234" data-caption="Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things"></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-56.jpg" data-position="6 .5 0" data-rotation="-180 0 43" data-caption="Oooh, if you have never been to Alaska, go there while it is still wild. My favorite uncle asked me if I wanted to go there, Uncle Sam. He said if you don't go, you're going to jail. That is how Uncle Sam asks you."></a-entity>
+                <a-entity id="polaroid-1" template="src: #polaroid" data-image="src: images/polaroids/polaroid-img-57.jpg" data-position="7 .5 0" data-rotation="-180 0 2" data-caption="I really believe that if you practice enough you could paint the 'Mona Lisa' with a two-inch brush."></a-entity>
         
         </a-entity>
         
@@ -391,7 +396,7 @@
           
         </a-entity>
         
-            <a-camera fov="80" position="0 0 0" rotation="0 0 0" userheight="1.8;">
+            <a-camera fov="80" position="0 0 0" rotation="0 0 0" userheight="1.8;"  gamepad-controls look-controls wasd-controls lookEnabled="false">
            
                 <a-cursor></a-cursor>
             </a-camera>
